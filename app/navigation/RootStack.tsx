@@ -1,4 +1,4 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createNativeStackNavigator, NativeStackScreenProps } from "@react-navigation/native-stack";
 import Home from "../screens/Home";
 import Feed from "../screens/Feed";
 import Profile from "../screens/Profile";
@@ -8,10 +8,15 @@ type TRootStackParamList = {
     Home: undefined;
     Feed: undefined;
     Profile: undefined;
-    Details: {itemId: number}
+    Details: { itemId: number }
 }
 
 const RootStack = createNativeStackNavigator<TRootStackParamList>()
+
+export type THomePageProps = NativeStackScreenProps<TRootStackParamList, 'Home'>
+export type TFeedPageProps = NativeStackScreenProps<TRootStackParamList, 'Feed'>
+export type TProfilePageProps = NativeStackScreenProps<TRootStackParamList, 'Profile'>
+export type TDetailsPageProps = NativeStackScreenProps<TRootStackParamList, 'Details'>
 
 const RootStackNavigation = () => {
     return (
