@@ -3,12 +3,14 @@ import Home from "../screens/Home";
 import Feed from "../screens/Feed";
 import Profile from "../screens/Profile";
 import Details from "../screens/Details";
+import DrawerNavPage from "./Drawer";
 
 type TRootStackParamList = {
     Home: undefined;
     Feed: undefined;
     Profile: undefined;
     Details: { itemId: number }
+    Drawer: undefined
 }
 
 const RootStack = createNativeStackNavigator<TRootStackParamList>()
@@ -33,6 +35,7 @@ const RootStackNavigation = () => {
             <RootStack.Screen name="Feed" component={Feed} options={{ title: 'Feed' }} />
             <RootStack.Screen name="Profile" component={Profile} options={{ title: 'Profile' }} />
             <RootStack.Screen name="Details" component={Details} options={{ title: 'Details' }} />
+            <RootStack.Screen name="Drawer" component={DrawerNavPage} options={{ title: 'Drawer' }} />
         </RootStack.Navigator>
     )
 }
