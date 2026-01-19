@@ -1,8 +1,13 @@
 import { View, Text, Button } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { TDetailsPageProps } from '../navigation/RootStack'
 
 const Details = ({navigation, route} : TDetailsPageProps) => {
+    useLayoutEffect(()=> {
+        navigation.setOptions({
+            title: `details of ${route.params.itemId}`
+        })
+    })
     const {itemId} = route.params
 
   return (

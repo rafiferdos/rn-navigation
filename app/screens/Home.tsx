@@ -1,9 +1,17 @@
 import { View, Text, Button } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { THomePageProps } from '../navigation/RootStack'
 
 const Home = ({ navigation }: THomePageProps) => {
+    useLayoutEffect(()=> {
+        navigation.setOptions({
+            title: 'Home Screen',
+            headerRight: () => (
+                <Button title="Go to Profile" onPress={() => navigation.push("Profile")} />
+            )
+        })
+    })
     return (
         <View>
             <Text>Home</Text>
