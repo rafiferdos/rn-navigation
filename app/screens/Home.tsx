@@ -11,6 +11,7 @@ const Home = ({ navigation }: THomePageProps) => {
             <Button title="Go to Profile" onPress={() => navigation.push("Profile")} />
             <Button title="Go to Details" onPress={() => navigation.push("Details", { itemId: 1 })} />
             <View style={{ margin: 16 }} />
+            <Button title="Details 50" onPress={() => navigation.push("Details", { itemId: 50 })} />
         </View>
     )
 }
