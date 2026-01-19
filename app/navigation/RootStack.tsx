@@ -3,7 +3,7 @@ import HomeScreen from "../screens/Home";
 
 const RootStack = createNativeStackNavigator()
 
-const RootStackScreen = () => {
+const RootStackNavigation = () => {
     return (
         <RootStack.Navigator>
             <RootStack.Screen name="Home" component={HomeScreen} />
@@ -11,4 +11,4 @@ const RootStackScreen = () => {
     )
 }
 
-export default RootStackScreen
+export default RootStackNavigation
