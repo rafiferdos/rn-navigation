@@ -1,12 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/Home";
+import Home from "../screens/Home";
+import Feed from "../screens/Feed";
 
 const RootStack = createNativeStackNavigator()
 
 const RootStackNavigation = () => {
     return (
         <RootStack.Navigator>
-            <RootStack.Screen name="Home" component={HomeScreen} />
+            <RootStack.Screen name="Home" component={Home} />
+            <RootStack.Screen name="Feed" component={Feed} />
         </RootStack.Navigator>
     )
 }
