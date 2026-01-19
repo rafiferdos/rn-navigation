@@ -20,11 +20,19 @@ export type TDetailsPageProps = NativeStackScreenProps<TRootStackParamList, 'Det
 
 const RootStackNavigation = () => {
     return (
-        <RootStack.Navigator>
-            <RootStack.Screen name="Home" component={Home} />
-            <RootStack.Screen name="Feed" component={Feed} />
-            <RootStack.Screen name="Profile" component={Profile} />
-            <RootStack.Screen name="Details" component={Details} />
+        <RootStack.Navigator screenOptions={{
+            headerStyle: {
+                backgroundColor: '#fffee1'
+            },
+            headerTintColor: '#000',
+            headerTitleStyle: {
+                fontWeight: 'bold'
+            }
+        }}>
+            <RootStack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
+            <RootStack.Screen name="Feed" component={Feed} options={{ title: 'Feed' }} />
+            <RootStack.Screen name="Profile" component={Profile} options={{ title: 'Profile' }} />
+            <RootStack.Screen name="Details" component={Details} options={{ title: 'Details' }} />
         </RootStack.Navigator>
     )
 }
